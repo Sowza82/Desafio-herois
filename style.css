@@ -1,0 +1,37 @@
+/* Badge animada */
+#resultado {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 15px;
+  border-radius: 10px;
+  display: inline-block;
+  min-width: 220px;
+  transition: all 0.5s ease;
+  opacity: 0;
+  transform: scale(0.5);
+  text-align: center;
+}
+
+/* Efeito ao mostrar */
+.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Cores por nível e ícone maior */
+.nivel-ferro { background-color: #a0a0a0; color: #fff; }
+.nivel-bronze { background-color: #cd7f32; color: #fff; }
+.nivel-prata { background-color: #c0c0c0; color: #000; }
+.nivel-ouro { background-color: #ffd700; color: #000; }
+.nivel-platina { background-color: #e5e4e2; color: #000; }
+.nivel-ascendente { background-color: #9370DB; color: #fff; }
+.nivel-imortal { background-color: #4B0082; color: #fff; }
+.nivel-radiante { background-color: #ffdf00; color: #000; }
+
+/* Ícone no badge */
+#resultado i {
+  margin-left: 8px;
+  font-size: 1.3rem;
+  vertical-align: middle;
+}
