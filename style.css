@@ -1,3 +1,92 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #4b0082, #7b2cbf);
+  color: #f0eaff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #fff;
+  /* título e emoji brancos */
+}
+
+/* Container */
+.container {
+  flex: 1;
+  max-width: 500px;
+  margin: 30px auto;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Inputs */
+.input-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #f0eaff;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #9b5de5;
+  outline: none;
+  font-size: 1rem;
+  background: #f8f0ff;
+  /* lilás bem claro */
+  color: #333;
+  transition: border .3s, box-shadow .3s;
+}
+
+input:focus {
+  border: 1px solid #7b2cbf;
+  box-shadow: 0 0 5px #9b5de5;
+}
+
+/* Botão */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #9b5de5;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+button:hover {
+  background: #7b2cbf;
+  transform: scale(1.05);
+}
+
 /* Badge animada */
 #resultado {
   margin-top: 20px;
@@ -7,31 +96,96 @@
   border-radius: 10px;
   display: inline-block;
   min-width: 220px;
-  transition: all 0.5s ease;
+  transition: all .5s ease;
   opacity: 0;
   transform: scale(0.5);
   text-align: center;
 }
 
-/* Efeito ao mostrar */
-.show {
+#resultado.show {
   opacity: 1;
   transform: scale(1);
 }
 
-/* Cores por nível e ícone maior */
-.nivel-ferro { background-color: #a0a0a0; color: #fff; }
-.nivel-bronze { background-color: #cd7f32; color: #fff; }
-.nivel-prata { background-color: #c0c0c0; color: #000; }
-.nivel-ouro { background-color: #ffd700; color: #000; }
-.nivel-platina { background-color: #e5e4e2; color: #000; }
-.nivel-ascendente { background-color: #9370DB; color: #fff; }
-.nivel-imortal { background-color: #4B0082; color: #fff; }
-.nivel-radiante { background-color: #ffdf00; color: #000; }
+/* Níveis */
+.nivel-ferro {
+  background-color: #555;
+  color: #fff;
+}
 
-/* Ícone no badge */
-#resultado i {
-  margin-left: 8px;
-  font-size: 1.3rem;
-  vertical-align: middle;
+.nivel-bronze {
+  background-color: #8d5524;
+  color: #fff;
+}
+
+.nivel-prata {
+  background-color: #c0c0c0;
+  color: #222;
+}
+
+.nivel-ouro {
+  background-color: #d4af37;
+  color: #222;
+}
+
+.nivel-platina {
+  background-color: #a8dadc;
+  color: #222;
+}
+
+.nivel-ascendente {
+  background-color: #7b2cbf;
+  color: #fff;
+}
+
+.nivel-imortal {
+  background-color: #4b0082;
+  color: #fff;
+}
+
+.nivel-radiante {
+  background-color: #ffea00;
+  color: #222;
+}
+
+/* Toast */
+#toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .4s ease, transform .4s ease;
+  z-index: 999;
+  font-weight: bold;
+  color: #fff;
+}
+
+#toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#toast.success {
+  background: #2e7d32;
+}
+/* verde sucesso */
+#toast.error {
+  background: #c62828;
+}
+/* vermelho erro */
+#toast.info {
+  background: #7b2cbf;
+}
+/* roxo info */
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: .9rem;
+  color: #f0eaff;
 }
